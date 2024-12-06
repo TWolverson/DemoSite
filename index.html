@@ -1,4 +1,19 @@
 <html>
+  <head>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+        setInterval(() => {
+          var table = document.getElementsByTagName("table")[0];
+          for(int row = 0; row < 5, row++){            
+            for(int column = 0; column < 5, column++){
+              table.elements[row].elements[column].setAttribute("bgcolor",  "#" + (Date.now() % 16777216).ToString())
+            }
+          }          
+        },
+        1000);
+      });
+    </script>
+  </head>
 <table>
 <th><td>Column1</td><td>Column2</td><td>Column3</td><td>Column4</td><td>Column5</td></th>
 <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
