@@ -4,8 +4,8 @@
       document.addEventListener("DOMContentLoaded", function(event) {
         setInterval(() => {
           var table = document.getElementsByTagName("table")[0];
-          for(int row = 0; row < 5, row++){            
-            for(int column = 0; column < 5, column++){
+          for(int row = 0; row < 5; row++){            
+            for(int column = 0; column < 5; column++){
               table.elements[row].elements[column].setAttribute("bgcolor",  "#" + (Date.now() % 16777216).ToString());
             }
           }          
