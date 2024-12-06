@@ -1,24 +1,54 @@
 <html>
-  <head>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function(event) {
-        setInterval(() => {
-          var table = document.getElementsByTagName("table")[0];
-          for(int row = 0; row < 5; row++){            
-            for(int column = 0; column < 5; column++){
-              table.elements[row].elements[column].setAttribute("bgcolor",  "#" + (Date.now() % 16777216).ToString());
-            }
-          }          
-        },
-        1000);
-      });
-    </script>
-  </head>
+
+<head>
+  <script type="text/javascript">
+    setInterval(() => {
+      var table = document.getElementsByTagName("table")[0];
+      for (let row = 0; row < 5; row++) {
+        for (let column = 0; column < 5; column++) {
+          table.rows.item(row).cells.item(column).setAttribute("bgcolor", "#" + ((Date.now() / (row + 1) * (column + 1)) % 16777216).toString(16))
+        }
+      }
+    },
+      100);
+  </script>
+</head>
 <table>
-<th><td>Column1</td><td>Column2</td><td>Column3</td><td>Column4</td><td>Column5</td></th>
-<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+  <tr>
+    <th>Column1</th>
+    <th>Column2</th>
+    <th>Column3</th>
+    <th>Column4</th>
+    <th>Column5</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
 </table>
+
 </html>
